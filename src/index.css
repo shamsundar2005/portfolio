@@ -1,0 +1,96 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark theme portfolio design system */
+@layer base {
+  :root {
+    --background: 217 33% 7%;
+    --foreground: 218 11% 95%;
+
+    --card: 217 33% 12%;
+    --card-foreground: 218 11% 95%;
+
+    --popover: 217 33% 12%;
+    --popover-foreground: 218 11% 95%;
+
+    --primary: 271 76% 53%;
+    --primary-foreground: 218 11% 95%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 218 11% 95%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 218 11% 65%;
+
+    --accent: 193 76% 53%;
+    --accent-foreground: 217 33% 7%
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 218 11% 95%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 271 76% 53%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10;
+  }
+  
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .floating-shapes::before,
+  .floating-shapes::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(168, 85, 247, 0.1), rgba(20, 184, 166, 0.1));
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .floating-shapes::before {
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 10%;
+    animation-delay: -2s;
+  }
+  
+  .floating-shapes::after {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 10%;
+    animation-delay: -1s;
+  }
+}
