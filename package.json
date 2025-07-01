@@ -1,8 +1,8 @@
 {
   "homepage": "https://shamsundar2005.github.io/portfolio/",
   "name": "portfolio",
-  "private": false,
-  "version": "1.0.0",
+  "private": true,
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
