@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
   },
   base:"./portfolio/",
   plugins: [
+
     react(),
     mode === 'development' &&
     componentTagger(),
